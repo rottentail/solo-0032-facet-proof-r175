@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "action": "capacity_revised",
+      "created": 1794838085.6273243,
+      "payload": {
+        "capacity": 1200000,
+        "revision": 2
+      },
+      "seq": 8,
+      "subject": "sample-policy"
+    },
+    {
+      "action": "capacity_revised",
+      "created": 1794838085.9733503,
+      "payload": {
+        "capacity": 400,
+        "revision": 3
+      },
+      "seq": 62,
+      "subject": "sample-policy"
+    },
+    {
+      "action": "capacity_revised",
+      "created": 1794838085.9887533,
+      "payload": {
+        "capacity": 512,
+        "revision": 4
+      },
+      "seq": 63,
+      "subject": "sample-policy"
+    },
+    {
+      "action": "capacity_revised",
+      "created": 1794838086.0079195,
+      "payload": {
+        "capacity": 400,
+        "revision": 5
+      },
+      "seq": 66,
+      "subject": "sample-policy"
+    }
+  ]
+}

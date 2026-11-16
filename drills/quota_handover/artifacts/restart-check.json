@@ -1,0 +1,269 @@
+{
+  "before": {
+    "resources": {
+      "available": 0,
+      "capacity": 400,
+      "overcommitted": 112,
+      "physical_memory_limit": false,
+      "reserved": 512,
+      "revision": 5,
+      "unit": "high_sample_pixel"
+    },
+    "exposures": {
+      "alpha": {
+        "allocation": {
+          "active": 0,
+          "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "generation": 1,
+          "release_reason": "cancelled",
+          "released": 1794838085.924445,
+          "reserved": 1794838085.6327074,
+          "units": 1048576
+        },
+        "attempt": 1,
+        "cancel_requested": 1,
+        "created": 1794838085.6327732,
+        "dedup_key": "alpha",
+        "error": "cancelled",
+        "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+        "lease_until": null,
+        "plate_id": null,
+        "request": {
+          "height": 512,
+          "renderer": "facet-raster-1",
+          "samples": 2,
+          "width": 512
+        },
+        "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+        "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+        "state": "cancelled",
+        "token": null,
+        "updated": 1794838085.924364
+      },
+      "bravo": {
+        "allocation": {
+          "active": 1,
+          "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "generation": 2,
+          "release_reason": null,
+          "released": null,
+          "reserved": 1794838085.9994702,
+          "units": 256
+        },
+        "attempt": 1,
+        "cancel_requested": 0,
+        "created": 1794838085.639403,
+        "dedup_key": "bravo",
+        "error": null,
+        "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+        "lease_until": null,
+        "plate_id": null,
+        "request": {
+          "height": 16,
+          "renderer": "facet-raster-1",
+          "samples": 1,
+          "width": 16
+        },
+        "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+        "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+        "state": "queued",
+        "token": null,
+        "updated": 1794838085.999591
+      },
+      "charlie": {
+        "allocation": {
+          "active": 1,
+          "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "generation": 1,
+          "release_reason": null,
+          "released": null,
+          "reserved": 1794838085.909135,
+          "units": 256
+        },
+        "attempt": 0,
+        "cancel_requested": 0,
+        "created": 1794838085.9092007,
+        "dedup_key": "charlie",
+        "error": null,
+        "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+        "lease_until": null,
+        "plate_id": null,
+        "request": {
+          "height": 16,
+          "renderer": "facet-raster-1",
+          "samples": 1,
+          "width": 16
+        },
+        "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+        "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+        "state": "queued",
+        "token": null,
+        "updated": 1794838085.9092007
+      }
+    },
+    "progress_alpha": {
+      "committed_pixels": 159744,
+      "committed_tiles": 39,
+      "complete": false,
+      "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+      "fingerprint": "ae15032d75be079156b571ed89da8f8a2d6218dc65ee4976a616b9a2a21caeb8",
+      "planned": true,
+      "state": "cancelled",
+      "total_pixels": 1048576,
+      "total_tiles": 256
+    }
+  },
+  "after": {
+    "resources": {
+      "available": 0,
+      "capacity": 400,
+      "overcommitted": 112,
+      "physical_memory_limit": false,
+      "reserved": 512,
+      "revision": 5,
+      "unit": "high_sample_pixel"
+    },
+    "exposures": {
+      "alpha": {
+        "allocation": {
+          "active": 0,
+          "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "generation": 1,
+          "release_reason": "cancelled",
+          "released": 1794838085.924445,
+          "reserved": 1794838085.6327074,
+          "units": 1048576
+        },
+        "attempt": 1,
+        "cancel_requested": 1,
+        "created": 1794838085.6327732,
+        "dedup_key": "alpha",
+        "error": "cancelled",
+        "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+        "lease_until": null,
+        "plate_id": null,
+        "request": {
+          "height": 512,
+          "renderer": "facet-raster-1",
+          "samples": 2,
+          "width": 512
+        },
+        "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+        "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+        "state": "cancelled",
+        "token": null,
+        "updated": 1794838085.924364
+      },
+      "bravo": {
+        "allocation": {
+          "active": 1,
+          "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "generation": 2,
+          "release_reason": null,
+          "released": null,
+          "reserved": 1794838085.9994702,
+          "units": 256
+        },
+        "attempt": 1,
+        "cancel_requested": 0,
+        "created": 1794838085.639403,
+        "dedup_key": "bravo",
+        "error": null,
+        "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+        "lease_until": null,
+        "plate_id": null,
+        "request": {
+          "height": 16,
+          "renderer": "facet-raster-1",
+          "samples": 1,
+          "width": 16
+        },
+        "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+        "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+        "state": "queued",
+        "token": null,
+        "updated": 1794838085.999591
+      },
+      "charlie": {
+        "allocation": {
+          "active": 1,
+          "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "generation": 1,
+          "release_reason": null,
+          "released": null,
+          "reserved": 1794838085.909135,
+          "units": 256
+        },
+        "attempt": 0,
+        "cancel_requested": 0,
+        "created": 1794838085.9092007,
+        "dedup_key": "charlie",
+        "error": null,
+        "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+        "lease_until": null,
+        "plate_id": null,
+        "request": {
+          "height": 16,
+          "renderer": "facet-raster-1",
+          "samples": 1,
+          "width": 16
+        },
+        "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+        "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+        "state": "queued",
+        "token": null,
+        "updated": 1794838085.9092007
+      }
+    },
+    "progress_alpha": {
+      "committed_pixels": 159744,
+      "committed_tiles": 39,
+      "complete": false,
+      "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+      "fingerprint": "ae15032d75be079156b571ed89da8f8a2d6218dc65ee4976a616b9a2a21caeb8",
+      "planned": true,
+      "state": "cancelled",
+      "total_pixels": 1048576,
+      "total_tiles": 256
+    }
+  },
+  "identical": {
+    "resources": true,
+    "progress_alpha": true,
+    "alpha": true,
+    "bravo": true,
+    "charlie": true
+  },
+  "recover": {
+    "recovered": []
+  },
+  "reconcile": {
+    "adopted": [],
+    "capacity": {
+      "available": 0,
+      "capacity": 400,
+      "overcommitted": 112,
+      "physical_memory_limit": false,
+      "reserved": 512,
+      "revision": 5,
+      "unit": "high_sample_pixel"
+    },
+    "released": [],
+    "waiting": []
+  },
+  "cancel_reserved": 1049088,
+  "summary": {
+    "逐项一致": {
+      "resources": true,
+      "progress_alpha": true,
+      "alpha": true,
+      "bravo": true,
+      "charlie": true
+    },
+    "reconcile": {
+      "adopted": [],
+      "released": [],
+      "waiting": []
+    }
+  }
+}

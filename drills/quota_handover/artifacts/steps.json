@@ -1,0 +1,1625 @@
+{
+  "steps": [
+    {
+      "step": "S0",
+      "title": "建快照并把画布额度设为 1,200,000 高采样像素",
+      "note": "默认策略 4,194,304 → 1,200,000；本班容量基线",
+      "ledger": {
+        "available": 1200000,
+        "capacity": 1200000,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 0,
+        "revision": 2,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {}
+    },
+    {
+      "step": "S1",
+      "title": "接收 alpha：512×512×2 = 1,048,576 单位",
+      "note": "接收与预留同一事务",
+      "ledger": {
+        "available": 151424,
+        "capacity": 1200000,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 1048576,
+        "revision": 2,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": null,
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.6327732
+        }
+      }
+    },
+    {
+      "step": "S2",
+      "title": "接收 bravo：16×16×1 = 256 单位",
+      "note": "",
+      "ledger": {
+        "available": 151168,
+        "capacity": 1200000,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 1048832,
+        "revision": 2,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": null,
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.6327732
+        },
+        "bravo": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.6393528,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": null,
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.639403
+        }
+      }
+    },
+    {
+      "step": "S3",
+      "title": "alpha 渲染途中接收 charlie：256 单位",
+      "note": "渲染进行时不影响新接收；三块账目同时挂账",
+      "ledger": {
+        "available": 150912,
+        "capacity": 1200000,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 1049088,
+        "revision": 2,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 0,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": null,
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": 1794838205.8042638,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "running",
+          "token": "lease_f2f96ed0df7a44ecaab5534849a3088d",
+          "updated": 1794838085.8042643
+        },
+        "bravo": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.6393528,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": null,
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.639403
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S4",
+      "title": "运行中取消 alpha：返回 200，但状态仍 running",
+      "note": "关键：此时 reserved 不变，1,048,576 单位仍挂在 alpha 名下",
+      "ledger": {
+        "available": 150912,
+        "capacity": 1200000,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 1049088,
+        "revision": 2,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": null,
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": 1794838205.8042638,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "running",
+          "token": "lease_f2f96ed0df7a44ecaab5534849a3088d",
+          "updated": 1794838085.920514
+        },
+        "bravo": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.6393528,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": null,
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.639403
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S5",
+      "title": "alpha 终态 cancelled：额度此刻才归还",
+      "note": "已提交分块保留可查，但进度不等于图版",
+      "ledger": {
+        "available": 1199488,
+        "capacity": 1200000,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 512,
+        "revision": 2,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.6393528,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": null,
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.639403
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S6",
+      "title": "同键重发 alpha：同一曝光、不重复预留；异参 409",
+      "note": "重发不是新承诺；账目不动",
+      "ledger": {
+        "available": 1199488,
+        "capacity": 1200000,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 512,
+        "revision": 2,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.6393528,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": null,
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.639403
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S7",
+      "title": "bravo 失败终态：额度随终态归还",
+      "note": "failed 是终态；256 单位归还，可用额度回升",
+      "ledger": {
+        "available": 1199744,
+        "capacity": 1200000,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 256,
+        "revision": 2,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 1,
+            "release_reason": "failed",
+            "released": 1794838085.9658065,
+            "reserved": 1794838085.6393528,
+            "units": 256
+          },
+          "attempt": 1,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": "worker_crash",
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "failed",
+          "token": null,
+          "updated": 1794838085.9657388
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S8",
+      "title": "缩容：capacity 1,200,000 → 400",
+      "note": "charlie 的 256 单位仍在；available=144",
+      "ledger": {
+        "available": 144,
+        "capacity": 400,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 256,
+        "revision": 3,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 1,
+            "release_reason": "failed",
+            "released": 1794838085.9658065,
+            "reserved": 1794838085.6393528,
+            "units": 256
+          },
+          "attempt": 1,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": "worker_crash",
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "failed",
+          "token": null,
+          "updated": 1794838085.9657388
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S9",
+      "title": "retry bravo 被 429 拒绝：available=144 < 256",
+      "note": "failed 已归还；再执行是新承诺，须重新过闸门",
+      "ledger": {
+        "available": 144,
+        "capacity": 400,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 256,
+        "revision": 3,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 1,
+            "release_reason": "failed",
+            "released": 1794838085.9658065,
+            "reserved": 1794838085.6393528,
+            "units": 256
+          },
+          "attempt": 1,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": "worker_crash",
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "failed",
+          "token": null,
+          "updated": 1794838085.9657388
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S10",
+      "title": "值班长决策：capacity 400 → 512 以便重跑 bravo",
+      "note": "",
+      "ledger": {
+        "available": 256,
+        "capacity": 512,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 256,
+        "revision": 4,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 1,
+            "release_reason": "failed",
+            "released": 1794838085.9658065,
+            "reserved": 1794838085.6393528,
+            "units": 256
+          },
+          "attempt": 1,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": "worker_crash",
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "failed",
+          "token": null,
+          "updated": 1794838085.9657388
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S11",
+      "title": "retry bravo 成功：queued，承诺第 2 代",
+      "note": "同一曝光身份不变，尝试号与承诺代次增长",
+      "ledger": {
+        "available": 0,
+        "capacity": 512,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 512,
+        "revision": 4,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 2,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.9994702,
+            "units": 256
+          },
+          "attempt": 1,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": null,
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.999591
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S12",
+      "title": "缩容：capacity 512 → 400，账面超额 112",
+      "note": "关键：bravo/charlie 承诺不消失，超额只是账面相减",
+      "ledger": {
+        "available": 0,
+        "capacity": 400,
+        "overcommitted": 112,
+        "physical_memory_limit": false,
+        "reserved": 512,
+        "revision": 5,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 2,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.9994702,
+            "units": 256
+          },
+          "attempt": 1,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": null,
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.999591
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S13",
+      "title": "delta 被 429 拒绝；过期 revision 的提额被 409 拒绝",
+      "note": "拒绝不留痕迹：delta 没有曝光、没有预留；账目不变",
+      "ledger": {
+        "available": 0,
+        "capacity": 400,
+        "overcommitted": 112,
+        "physical_memory_limit": false,
+        "reserved": 512,
+        "revision": 5,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 2,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.9994702,
+            "units": 256
+          },
+          "attempt": 1,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": null,
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.999591
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S14",
+      "title": "服务重启：同一数据根上账目、承诺、进度逐字段一致",
+      "note": "reconcile 全空：承诺去向可沿同一曝光核对，无需补记",
+      "ledger": {
+        "available": 0,
+        "capacity": 400,
+        "overcommitted": 112,
+        "physical_memory_limit": false,
+        "reserved": 512,
+        "revision": 5,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 2,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.9994702,
+            "units": 256
+          },
+          "attempt": 1,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": null,
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.999591
+        },
+        "charlie": {
+          "allocation": {
+            "active": 1,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": null,
+            "released": null,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 0,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "queued",
+          "token": null,
+          "updated": 1794838085.9092007
+        }
+      }
+    },
+    {
+      "step": "S15",
+      "title": "bravo、charlie 依次渲染成功，队列排空",
+      "note": "available=0 时领取只看有效承诺；成功终态归还额度",
+      "ledger": {
+        "available": 400,
+        "capacity": 400,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 0,
+        "revision": 5,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 2,
+            "release_reason": "succeeded",
+            "released": 1794838086.2011096,
+            "reserved": 1794838085.9994702,
+            "units": 256
+          },
+          "attempt": 2,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": null,
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": "plate_2ee12becc9234d8382bf9ae2d1a47165",
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "succeeded",
+          "token": null,
+          "updated": 1794838086.2010348
+        },
+        "charlie": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": "succeeded",
+            "released": 1794838086.2224286,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 1,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": "plate_3da788ecab9640458c3875ea9eb4693c",
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "succeeded",
+          "token": null,
+          "updated": 1794838086.2223575
+        }
+      }
+    },
+    {
+      "step": "S16",
+      "title": "图版与事件历史落盘，本班结束",
+      "note": "reserved=0：所有承诺都有终态去向",
+      "ledger": {
+        "available": 400,
+        "capacity": 400,
+        "overcommitted": 0,
+        "physical_memory_limit": false,
+        "reserved": 0,
+        "revision": 5,
+        "unit": "high_sample_pixel"
+      },
+      "exposures": {
+        "alpha": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+            "generation": 1,
+            "release_reason": "cancelled",
+            "released": 1794838085.924445,
+            "reserved": 1794838085.6327074,
+            "units": 1048576
+          },
+          "attempt": 1,
+          "cancel_requested": 1,
+          "created": 1794838085.6327732,
+          "dedup_key": "alpha",
+          "error": "cancelled",
+          "id": "exposure_6d57ed173bb246918ce7bf0271945ad9",
+          "lease_until": null,
+          "plate_id": null,
+          "request": {
+            "height": 512,
+            "renderer": "facet-raster-1",
+            "samples": 2,
+            "width": 512
+          },
+          "request_hash": "b61ffc8cc74f6c60706a4716b487e80c1c5d14dd6d8df370e95a3e707a122670",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "cancelled",
+          "token": null,
+          "updated": 1794838085.924364
+        },
+        "bravo": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+            "generation": 2,
+            "release_reason": "succeeded",
+            "released": 1794838086.2011096,
+            "reserved": 1794838085.9994702,
+            "units": 256
+          },
+          "attempt": 2,
+          "cancel_requested": 0,
+          "created": 1794838085.639403,
+          "dedup_key": "bravo",
+          "error": null,
+          "id": "exposure_6d88888464724f89b44c86fb7a14bbe1",
+          "lease_until": null,
+          "plate_id": "plate_2ee12becc9234d8382bf9ae2d1a47165",
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "succeeded",
+          "token": null,
+          "updated": 1794838086.2010348
+        },
+        "charlie": {
+          "allocation": {
+            "active": 0,
+            "exposure_id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+            "generation": 1,
+            "release_reason": "succeeded",
+            "released": 1794838086.2224286,
+            "reserved": 1794838085.909135,
+            "units": 256
+          },
+          "attempt": 1,
+          "cancel_requested": 0,
+          "created": 1794838085.9092007,
+          "dedup_key": "charlie",
+          "error": null,
+          "id": "exposure_81ae8d910f184222b0b0b83f4c57cf7f",
+          "lease_until": null,
+          "plate_id": "plate_3da788ecab9640458c3875ea9eb4693c",
+          "request": {
+            "height": 16,
+            "renderer": "facet-raster-1",
+            "samples": 1,
+            "width": 16
+          },
+          "request_hash": "d1a45fefdbdc6a744293be6b9226c65cae00d10dd6566c0e98a6646623fb13f5",
+          "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3",
+          "state": "succeeded",
+          "token": null,
+          "updated": 1794838086.2223575
+        }
+      }
+    }
+  ]
+}

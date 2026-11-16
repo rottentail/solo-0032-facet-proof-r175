@@ -37,3 +37,13 @@ python3 -m facetreader ./plate-bundle.zip --output ./received-plate
 `GET /facet/v1/maintenance/inspect` 提供固定 SQL 观察边界下的通道引用、共享关系及字节核验。无引用内容与可能仍在写入的内容须区分，巡检不提供删除操作。图版逻辑清退继续保留内容；本服务没有物理垃圾回收功能。
 
 当前基线不包含测试套件，自动化测试有意延期；`facetproof.demo` 提供有界的业务流程检查，不应当作完整的测试覆盖。
+
+## 值班交接演练
+
+`drills/quota_handover/` 提供一套可复跑的额度交接演练：用真实 HTTP 请求安排额度缩小、运行中取消与失败后再执行交错的局面，逐步留痕请求、额度账目与最终图版，并含服务重启后的承诺核对：
+
+```sh
+python3 drills/quota_handover/scenario.py --force
+```
+
+产物（交班账目 `REPORT.md`、请求留痕、事件历史、图版与交付包）写入 `drills/quota_handover/artifacts/`；操作者练习见该目录的 `WORKBOOK.md`，答案依据见 `ANSWERS.md`。

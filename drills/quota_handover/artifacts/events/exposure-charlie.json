@@ -1,0 +1,79 @@
+{
+  "items": [
+    {
+      "action": "capacity_reserved",
+      "created": 1794838085.909165,
+      "payload": {
+        "generation": 1,
+        "units": 256
+      },
+      "seq": 53,
+      "subject": "exposure_81ae8d910f184222b0b0b83f4c57cf7f"
+    },
+    {
+      "action": "queued",
+      "created": 1794838085.909245,
+      "payload": {
+        "seal_id": "seal_a719e2814cf54e41939bdda4642b20a3"
+      },
+      "seq": 54,
+      "subject": "exposure_81ae8d910f184222b0b0b83f4c57cf7f"
+    },
+    {
+      "action": "claimed",
+      "created": 1794838086.2052836,
+      "payload": {
+        "token": "lease_1580023819054e4e884616eb8e648246"
+      },
+      "seq": 72,
+      "subject": "exposure_81ae8d910f184222b0b0b83f4c57cf7f"
+    },
+    {
+      "action": "tiles_prepared",
+      "created": 1794838086.2102141,
+      "payload": {
+        "fingerprint": "c97eacdbb3dcd831e99017b3cc956cd6309e529bb14dcb53aff805b7568e5c6e",
+        "tile_size": 64,
+        "tiles": 1
+      },
+      "seq": 73,
+      "subject": "exposure_81ae8d910f184222b0b0b83f4c57cf7f"
+    },
+    {
+      "action": "tile_committed",
+      "created": 1794838086.2140315,
+      "payload": {
+        "attempt": 1,
+        "bounds": [
+          0,
+          0,
+          16,
+          16
+        ],
+        "fingerprint": "c97eacdbb3dcd831e99017b3cc956cd6309e529bb14dcb53aff805b7568e5c6e",
+        "ordinal": 0,
+        "token": "lease_1580023819054e4e884616eb8e648246"
+      },
+      "seq": 74,
+      "subject": "exposure_81ae8d910f184222b0b0b83f4c57cf7f"
+    },
+    {
+      "action": "succeeded",
+      "created": 1794838086.222378,
+      "payload": {
+        "plate_id": "plate_3da788ecab9640458c3875ea9eb4693c"
+      },
+      "seq": 75,
+      "subject": "exposure_81ae8d910f184222b0b0b83f4c57cf7f"
+    },
+    {
+      "action": "capacity_released",
+      "created": 1794838086.2224429,
+      "payload": {
+        "reason": "succeeded"
+      },
+      "seq": 76,
+      "subject": "exposure_81ae8d910f184222b0b0b83f4c57cf7f"
+    }
+  ]
+}
